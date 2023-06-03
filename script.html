@@ -1,0 +1,20 @@
+
+
+<script>
+// Function to update the height of .title-column
+function updateTitleColumnHeight() {
+  const bodyColumn = document.querySelector('.body-column');
+  const paragraph = bodyColumn.querySelector('p');
+  const titleColumn = document.querySelector('.title-column');
+  if (window.innerWidth > 782) {
+    const paragraphHeight = paragraph.offsetHeight - 30;
+    titleColumn.style.height = `${paragraphHeight}px`;
+  } else {
+    titleColumn.style.height = '';
+  }
+}
+// Execute the function on page load
+updateTitleColumnHeight();
+// Add event listener for the resize event
+window.addEventListener('resize', updateTitleColumnHeight);
+</script>
