@@ -26,24 +26,44 @@ body .is-layout-flow > * + * {
   width: unset!important;
   padding: 0 30px;
 }
-.title-float {
+
+.floating-title {
   position: absolute;
+  top: 400px;
+  right: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 1;
+}
+.title-float {
   padding: 0 8px;
   background: #C60739;
   font-weight: 600;
   font-size: 37px;
   color: #ffffff;
-  z-index: 1;
+  margin-bottom: 10px;
 }
+
 .title-float.one {
-  right: 10%; top: 400px;
 }
 .title-float.two {
-  right: 10%; top: 470px;
 }
 .title-float.three {
-  right: 10%; top: 540px;
 }
+a.title-float-cta-button {
+  background: #FFFFFF;
+  border-radius: 3px;
+  border: 0;
+  color: #171A1C;
+  text-decoration: none;
+  padding: 10px 55px;
+  margin-top: 20px;
+}
+a.title-float-cta-button:hover {
+  color: #C60739;
+}
+
 p.rev-title {
   display: inline-block;
   background: white;
@@ -71,53 +91,14 @@ p.rev-title {
     justify-content: center;
   }
 }
+/* flaoting-title */
 @media (max-width: 950px) {
   .title-float {
      font-size: 30px;
-  }
-  .title-float.one {
-    top: 416px;
-  }
-}
-@media (max-width: 660px) {
-  .title-float {
-     font-size: 25px;
-  }
-  .title-float.one {
-    top: 450px;
-  }
-  .title-float.two {
-    top: 500px;
-  }
-  .title-float.three {
-    top: 550px;
   }
 }
 @media (max-width: 700px) {
   .title-float {
      font-size: 25px;
-  }
-  .title-float.one {
-    top: 270px;
-  }
-  .title-float.two {
-    top: 320px;
-  }
-  .title-float.three {
-    top: 370px;
-  }
-}
-@media (max-width: 599px) {
-  .title-float {
-     font-size: 25px;
-  }
-  .title-float.one {
-    top: 200px;
-  }
-  .title-float.two {
-    top: 250px;
-  }
-  .title-float.three {
-    top: 300px;
   }
 }
