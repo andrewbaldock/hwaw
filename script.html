@@ -1,20 +1,70 @@
-
-
 <script>
-// Function to update the height of .title-column
+/* ------------------------------------------
+ * Floating Text for homepage slideshow
+ */
+const YES_you_can_edit_the_floating_texts_here = {
+  text1: {
+    line1: 'Did you know',
+    line2: 'voting is a superpower?',
+    line3: '',
+  },
+  text2: {
+    line1: 'The power of young people',
+    line2: 'is a sleeping giant',
+    line3: '',
+  },
+  text3: {
+    line1: 'Many people',
+    line2: 'One purpose:',
+    line3: 'A free Florida',
+  },
+  // text4: {
+  //   line1: 'Cultivating the freedom to be',
+  //   line2: 'healthy, prosperous, and safe'
+  // }
+};
+const ft = YES_you_can_edit_the_floating_texts_here;
+let currentTextIndex = 1;
+const numTexts = Object.keys(ft).length;
+
+function changeText() {
+  const currentText = ft['text' + currentTextIndex];
+  const line1 = document.querySelector('.title-float.one');
+  const line2 = document.querySelector('.title-float.two');
+  const line3 = document.querySelector('.title-float.three');
+  line1.textContent = currentText.line1;
+  line2.textContent = currentText.line2;
+  line3.textContent = currentText.line3;
+  currentTextIndex = (currentTextIndex % numTexts) + 1;
+  console.log(line1, line2, line3)
+}
+
+function startTextRotation() {
+  intervalId = setInterval(changeText, 4300);
+}
+// Delay the start of the text rotation by 500 milliseconds
+setTimeout(startTextRotation, 500);
+/* ------- end floating text code */
+
+
+/* ------------------------------------------
+ * Update the height of .title-column, this
+ * vertically centers the 'Our Mission text'.
+ */
 function updateTitleColumnHeight() {
-  const bodyColumn = document.querySelector('.body-column');
-  const paragraph = bodyColumn.querySelector('p');
-  const titleColumn = document.querySelector('.title-column');
+  const bodyColumn = document.querySelector(".body-column");
+  const paragraph = bodyColumn.querySelector("p");
+  const titleColumn = document.querySelector(".title-column");
   if (window.innerWidth > 782) {
     const paragraphHeight = paragraph.offsetHeight - 30;
     titleColumn.style.height = `${paragraphHeight}px`;
   } else {
-    titleColumn.style.height = '';
+    titleColumn.style.height = "";
   }
 }
 // Execute the function on page load
 updateTitleColumnHeight();
 // Add event listener for the resize event
-window.addEventListener('resize', updateTitleColumnHeight);
+window.addEventListener("resize", updateTitleColumnHeight);
+/* ------- end updateTitleColumnHeight */
 </script>

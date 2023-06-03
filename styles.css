@@ -16,7 +16,9 @@ body .is-layout-flow > * + * {
 .wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_slide figure {
   align-items: baseline!important;
 }
-.homepage-slideshow .swiper-pagination {
+.homepage-slideshow .swiper-pagination,
+.wp-block-jetpack-slideshow_button-prev,
+.wp-block-jetpack-slideshow_button-next{
   display: none!important;
 }
 
@@ -34,10 +36,13 @@ body .is-layout-flow > * + * {
   z-index: 1;
 }
 .title-float.one {
-  right: 5%; top: 400px;
+  right: 10%; top: 400px;
 }
 .title-float.two {
   right: 10%; top: 470px;
+}
+.title-float.three {
+  right: 10%; top: 540px;
 }
 p.rev-title {
   display: inline-block;
@@ -84,6 +89,9 @@ p.rev-title {
   .title-float.two {
     top: 500px;
   }
+  .title-float.three {
+    top: 550px;
+  }
 }
 @media (max-width: 700px) {
   .title-float {
@@ -95,6 +103,9 @@ p.rev-title {
   .title-float.two {
     top: 320px;
   }
+  .title-float.three {
+    top: 370px;
+  }
 }
 @media (max-width: 599px) {
   .title-float {
@@ -105,5 +116,8 @@ p.rev-title {
   }
   .title-float.two {
     top: 250px;
+  }
+  .title-float.three {
+    top: 300px;
   }
 }
