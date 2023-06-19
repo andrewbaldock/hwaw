@@ -9,16 +9,46 @@ body .is-layout-flow > * + * {
 }
 
 /* How We All Win CSS */
+
+/* header */
+.hwaw-top-nav.wp-block-navigation .wp-block-navigation-link.current-menu-item .wp-block-navigation-item__label {
+  border-bottom: unset!important;
+  border-top: 2px solid #C04A60;
+  padding-top: 5px;
+}
+.hwaw-top-nav.wp-block-navigation .wp-block-navigation-link:not(.current-menu-item):hover {
+  border-top: 2px solid #C04A60;
+  color: #C04A60;
+}
+
+/* donate button */
+.header-donate-button .eb-button-wrapper a.eb-button-anchor  {
+  padding: 9px 30px!important;
+}
+.header-donate-button .eb-button-wrapper:hover {
+  opacity: 0.8;
+}
+.header-donate-button .eb-button-wrapper:active {
+  position: relative;
+  top: 3px;
+  left: 3px;
+}
+
+
 .homepage-slideshow {
   background-color: #171A1C!important;
 }
+body.home .wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_container.swiper-container {
+  max-height: 650px!important;
+}
 
-.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_slide figure {
+body.home .wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_slide figure {
   align-items: baseline!important;
 }
 .homepage-slideshow .swiper-pagination,
 .wp-block-jetpack-slideshow_button-prev,
-.wp-block-jetpack-slideshow_button-next{
+.wp-block-jetpack-slideshow_button-next,
+.wp-block-jetpack-slideshow_button-pause {
   display: none!important;
 }
 
@@ -45,19 +75,13 @@ body .is-layout-flow > * + * {
   margin-bottom: 10px;
 }
 
-.title-float.one {
-}
-.title-float.two {
-}
-.title-float.three {
-}
 a.title-float-cta-button {
   background: #FFFFFF;
   border-radius: 3px;
   border: 0;
   color: #171A1C;
   text-decoration: none;
-  padding: 10px 55px;
+  padding: 12px 55px;
   margin-top: 20px;
 }
 a.title-float-cta-button:hover {
@@ -75,6 +99,29 @@ p.rev-title {
   text-align: center;
   display: block;
 }
+.wp-block-essential-blocks-column.above-flippers-text {
+  height: 25px!important;
+}
+
+.homepage-flip-health {
+  text-align: center;
+}
+.homepage-flip-title {
+  white-space: pre-wrap;
+  min-width: 1px;
+  background: #fff;
+  width: unset;
+  display: inline-flex;
+  color: black!important;
+  padding: 15px;
+  font-size: 22px!important;
+  font-weight: 700;
+}
+
+
+.site-footer {
+  padding:0!important;
+}
 
 @media (max-width: 1169px) {
   body.home .has-global-padding.is-layout-constrained .featured-image-stack {
@@ -91,13 +138,19 @@ p.rev-title {
     justify-content: center;
   }
 }
-/* flaoting-title */
-@media (max-width: 950px) {
+/* floating-title */
+@media (max-width: 1000px) {
+  .floating-title {
+    top: 300px;
+  }
   .title-float {
      font-size: 30px;
   }
 }
 @media (max-width: 700px) {
+  .floating-title {
+    top: 200px;
+  }
   .title-float {
      font-size: 25px;
   }

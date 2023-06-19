@@ -7,16 +7,19 @@ const YES_you_can_edit_the_floating_texts_here = {
     line1: 'Did you know',
     line2: 'voting is a superpower?',
     line3: '',
+    button: 'Learn more',
   },
   text2: {
     line1: 'The power of young people',
     line2: 'is a sleeping giant',
     line3: '',
+    button: 'Get involved today',
   },
   text3: {
     line1: 'Many people',
     line2: 'One purpose:',
     line3: 'A free Florida',
+    button: 'View our mission',
   },
   // text4: {
   //   line1: 'Cultivating the freedom to be',
@@ -32,9 +35,11 @@ function changeText() {
   const line1 = document.querySelector('.title-float.one');
   const line2 = document.querySelector('.title-float.two');
   const line3 = document.querySelector('.title-float.three');
+  const btn = document.querySelector('.title-float-cta-button');
   line1.textContent = currentText.line1;
   line2.textContent = currentText.line2;
   line3.textContent = currentText.line3;
+  btn.textContent = currentText.button;
   currentTextIndex = (currentTextIndex % numTexts) + 1;
 }
 
