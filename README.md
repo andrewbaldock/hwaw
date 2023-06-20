@@ -1,6 +1,1 @@
-- How We All Win Campaign Website - Table of Contents
-  -- https://docs.google.com/document/d/1Fvfm-AuuuLjV9oDG_6pnau9TjpBmnZD8e7JjL5WqnoY/edit
-- 🤖 TFC WP tech notes - Custom Post & Fields, Grid, Flip-Boxes, Site Migration
-  -- https://docs.google.com/document/d/1uqJkqwDH9MqBP_A369PB74GaNZT6kOYgtPEiJr0GxlU/edit#heading=h.8y6i4di6f0uu
-- Staging TO DO
-  -- https://docs.google.com/document/d/1GWAUrPIr1tCGGOhF6S4oqzg5HoSAI1X3hMKUTq4Hu0c/edit
+Custom HTML, javascript, and CSS for the HWAW website
