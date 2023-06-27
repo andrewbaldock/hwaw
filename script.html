@@ -18,7 +18,7 @@ const YES_you_can_edit_the_floating_texts_here = {
     button: 'Get involved today',
   },
   text3: {
-    line1: 'Many people',
+    line1: 'Many people,',
     line2: 'One purpose:',
     line3: 'A free Florida',
     button: 'View our mission',
@@ -64,10 +64,29 @@ function updateTitleColumnHeight() {
     titleColumn.style.height = "";
   }
 }
-// Execute the function on page load
-updateTitleColumnHeight();
+
+/* ------------------------------------------
+ * Set left position of 'Our Mission text'.
+ */
+function updateTitleLeftPosition() {
+  const headerLeftEdge = document.querySelector('.header-left-edge');
+  const needsLeftEdge = document.querySelector('.needs-left-edge');
+  if(needsLeftEdge && headerLeftEdge?.offsetLeft) {
+    needsLeftEdge.style.left = headerLeftEdge.offsetLeft + 'px';
+  }
+}
+
+/* ------------------------------------------
+ * Wrapper function to execute all resize
+ * functions
+ */
+function onResize() {
+  updateTitleColumnHeight();
+  updateTitleLeftPosition();
+}
+// Execute on initial page load
+onResize();
 // Add event listener for the resize event
-window.addEventListener("resize", updateTitleColumnHeight);
-/* ------- end updateTitleColumnHeight */
+window.addEventListener("resize", onResize);
 
 </script>
