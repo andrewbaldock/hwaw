@@ -1,16 +1,28 @@
-/* Temporary fixes awaiting move into theme */
+/* How We All Win CSS
+ * github.com/andrewbaldock/hwaw/
+ */
 
-body .is-layout-flow > * + * {
-  margin-block-start: 1.5rem !important;
+
+body main.wp-block-group.is-layout-flow {
+  margin-block-start: 0.1rem !important;
 }
 
 .post-title {
   font-size: clamp(3rem, 8vw, 4rem);
 }
 
-/* How We All Win CSS */
+
+
+/* remove top padding */
+body div.wp-site-blocks {
+  padding-top: 0!important;
+}
 
 /* header */
+
+header.site-header {
+  padding-top: 2px;
+}
 .hwaw-top-nav.wp-block-navigation .wp-block-navigation-link.current-menu-item .wp-block-navigation-item__label {
   border-bottom: unset!important;
   border-top: 2px solid #C04A60;
