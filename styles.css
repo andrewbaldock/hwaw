@@ -79,6 +79,16 @@ body.home .wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_slide figure {
   margin-bottom: 0!important;
 }
 
+.about-leader-photo {
+  position: absolute;
+  bottom: 0;
+}
+@media (max-width: 781px) {
+  .about-leader-photo {
+    position: unset;
+  }
+}
+
 div.wp-site-blocks main div.wp-block-group.mission-banner {
   padding-top: 15px!important;
   padding-bottom: 15px!important;
@@ -91,7 +101,7 @@ div.wp-site-blocks main div.wp-block-group.mission-banner {
 
 .floating-title {
   position: absolute;
-  top: 250px;
+  top: 200px;
   right: 10%;
   display: flex;
   flex-direction: column;
@@ -140,7 +150,7 @@ p.rev-title {
 }
 
 .wp-block-jetpack-contact-form {
-  padding-left: 180px;
+  padding-left: 170px;
 }
 .contact-form .contact-form-title {
   position: relative;
@@ -151,6 +161,10 @@ p.rev-title {
 .email-submit-button button  {
   height:44px;
 }
+.email-submit-button button  {
+  line-height: 1em;
+}
+
 
 /* --------------------------------------------*/
 .oxilab-flip-box-front .oxilab-flip-box-2-data {
@@ -245,18 +259,31 @@ p.rev-title {
 /* floating-title */
 @media (max-width: 1000px) {
   .floating-title {
-    top: 300px;
+    top: 200px;
   }
   .title-float {
      font-size: 30px;
   }
 }
+@media (max-width: 781px) {
+  .mission-banner .body-column {
+    padding-top: 50px;
+  }
+}
 @media (max-width: 700px) {
   .floating-title {
-    top: 200px;
+    top: 210px;
   }
   .title-float {
      font-size: 25px;
+  }
+}
+@media (max-width: 600px) {
+  .floating-title {
+    top: 150px;
+  }
+  .title-float {
+     font-size: 20px;
   }
 }
 
