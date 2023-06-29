@@ -50,6 +50,7 @@ header.site-header {
 .homepage-slideshow {
   background-color: #171A1C!important;
 }
+body.home .wp-block-jetpack-slideshow.alignfull.homepage-slideshow,
 body.home .wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_container.swiper-container {
   max-height: 440px!important;
 }
@@ -221,6 +222,11 @@ p.rev-title {
   max-width: unset!important;
 }
 
+.videos-hwaw {
+  padding-left: 2px!important;
+  padding-right: 2px!important;
+}
+
 .media-card {
   box-shadow: 0px 8px 8px 0px #00000040;
   min-height: 550px;
@@ -234,6 +240,7 @@ p.rev-title {
 .media-card .no-underline-link:hover {
   opacity: 0.8;
 }
+
 
 .no-underline-link p {
   font-size:25px;
