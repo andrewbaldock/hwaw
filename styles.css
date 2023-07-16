@@ -2,6 +2,9 @@
  * github.com/andrewbaldock/hwaw/
  */
 
+body {
+  min-width: 500px;
+}
 
 body main.wp-block-group.is-layout-flow {
   margin-block-start: 0.1rem !important;
@@ -46,23 +49,30 @@ header.site-header {
   left: 3px;
 }
 
-
-.homepage-slideshow {
-  background-color: #171A1C!important;
+figure.homepage-image {
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-body.home .wp-block-jetpack-slideshow.alignfull.homepage-slideshow,
-body.home .wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_container.swiper-container {
-  max-height: 440px!important;
+/* homepage image */
+@media (min-width: 850px) {
+  figure.homepage-image img { margin-top: -80px; }
+  figure.homepage-image { height: 470px; }
 }
-
-body.home .wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_slide figure {
-  align-items: baseline!important;
+@media (max-width: 850px) {
+  figure.homepage-image { height: 450px; }
 }
-.homepage-slideshow .swiper-pagination,
-.wp-block-jetpack-slideshow_button-prev,
-.wp-block-jetpack-slideshow_button-next,
-.wp-block-jetpack-slideshow_button-pause {
-  display: none!important;
+@media (max-width: 800px) {
+  figure.homepage-image { height: 400px; }
+}
+@media (max-width: 750px) {
+  figure.homepage-image { height: 350px; }
+}
+@media (max-width: 700px) {
+  figure.homepage-image { height: 300px; }
 }
 
 .homepage-below-image .body-column {
@@ -165,7 +175,11 @@ p.rev-title {
 .email-submit-button button  {
   line-height: 1em;
 }
-
+@media (max-width: 450px) {
+  .email-submit-button button  {
+    width: 50%!important;
+  }
+}
 
 /* --------------------------------------------*/
 .oxilab-flip-box-front .oxilab-flip-box-2-data {
@@ -222,6 +236,8 @@ p.rev-title {
   max-width: unset!important;
 }
 
+/* MEDIA PAGE */
+
 .videos-hwaw {
   padding-left: 2px!important;
   padding-right: 2px!important;
@@ -239,6 +255,22 @@ p.rev-title {
 }
 .media-card .no-underline-link:hover {
   opacity: 0.8;
+}
+
+.eb-parent-eb-row-x65rb5g {
+  display: flex;
+}
+
+.eb-column-d5gpwmj,
+.eb-column-nlhlc2u {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.hide-this-section {
+  display: none;
 }
 
 
@@ -327,3 +359,4 @@ p.rev-title {
     font-size: 13px!important;
   }
 }
+
