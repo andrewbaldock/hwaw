@@ -78,11 +78,40 @@ figure.homepage-image {
 .homepage-below-image .body-column {
   flex-basis: 78%;
 }
-
 .needs-left-edge {
   position: absolute;
   /* left is set by script */
 }
+
+
+/* homepage flipboxes */
+.oxilab-flip-box-col-4, .oxilab-flip-box-col-3 {
+  width: 33.33%!important;
+}
+@media (max-width: 980px) and (min-width: 680px) {
+  .oxilab-flip-box-back .oxilab-info h3 { font-size: 18px; }
+  .oxilab-flip-box-back .oxilab-info { font-size: 14px; }
+}
+@media (max-width: 850px) and (min-width: 680px) {
+  /* CSS rules for screen sizes between 700px and 850px */
+  .fliptitle { font-size: 16px; }
+  .oxilab-flip-box-back .oxilab-info h3 { font-size: 16px; }
+  .oxilab-flip-box-back .oxilab-info { font-size: 13px; }
+}
+@media (max-width: 750px) and (min-width: 680px) {
+  /* CSS rules for screen sizes between 700px and 850px */
+  .fliptitle { font-size: 16px; }
+  .oxilab-flip-box-back .oxilab-info h3 { font-size: 15px; }
+  .oxilab-flip-box-back .oxilab-info { font-size: 11px; }
+}
+@media (max-width: 679px) {
+  .oxilab-flip-box-col-4, .oxilab-flip-box-col-3 {
+    width: 100%!important;
+  }
+}
+
+
+/* about page */
 
 .about-leader {
   padding-bottom: 0!important;
