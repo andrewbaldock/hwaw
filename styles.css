@@ -278,13 +278,15 @@ p.rev-title {
   padding-left: 2px!important;
   padding-right: 2px!important;
 }
-
+.media-card-boxshadow .eb-column-wrapper .eb-column-inner .wp-block-group.media-card {
+  padding-bottom: 0px!important;
+}
 .media-card-boxshadow {
   box-shadow: 0px 8px 8px 0px #00000040;
+  margin-bottom: 15px;
 }
 .media-card-text {
   padding: 0 46px 15px 30px;
-  margin-bottom: 15px;
 }
 .media-card .no-underline-link {
   text-decoration: none;
