@@ -335,7 +335,7 @@ p.rev-title {
 /* floating-title */
 @media (max-width: 1000px) {
   .floating-title {
-    top: 200px;
+    top: 210px;
   }
   .title-float {
      font-size: 30px;
@@ -348,7 +348,7 @@ p.rev-title {
 }
 @media (max-width: 700px) {
   .floating-title {
-    top: 210px;
+    top: 130px;
   }
   .title-float {
      font-size: 25px;
@@ -356,7 +356,7 @@ p.rev-title {
 }
 @media (max-width: 600px) {
   .floating-title {
-    top: 150px;
+    top: 130px;
   }
   .title-float {
      font-size: 20px;
