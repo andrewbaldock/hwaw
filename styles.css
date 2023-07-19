@@ -94,7 +94,7 @@ figure.homepage-image {
   align-items: center;
 }
 figure.homepage-image img {
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 @media (max-width: 1000px) {
