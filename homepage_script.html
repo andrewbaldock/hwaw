@@ -3,6 +3,8 @@
    * ••• Floating Text for homepage slideshow
    */
 
+  const doUpdateImages = false; // toggle whether or not images should rotate as well, here
+
   // This is where to edit the floating texts
   const contents = {
     banner1: {
@@ -63,7 +65,7 @@
   function changeContent() {
     const content = contents['banner' + contentIndex];
 
-    if (content.img) {
+    if (content.img && doUpdateImages) {
       updateImageElement(content.img);
     }
 
