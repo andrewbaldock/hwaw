@@ -50,6 +50,41 @@ header.site-header {
 }
 /* --------------------------------------------*/
 /* homepage image */
+
+.floating-title {
+  position: absolute;
+  top: 195px;
+  right: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 1;
+}
+.two-lines-floating .floating-title {
+  top: 210px;
+}
+.title-float {
+  padding: 0 8px;
+  background: #C60739;
+  font-weight: 600;
+  font-size: 37px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+a.title-float-cta-button {
+  background: #FFFFFF;
+  border-radius: 3px;
+  border: 0;
+  color: #171A1C;
+  text-decoration: none;
+  padding: 12px 55px;
+  margin-top: 20px;
+}
+a.title-float-cta-button:hover {
+  color: #C60739;
+}
+
 figure.homepage-image {
   width: 100%;
   height: 550px;
@@ -58,23 +93,50 @@ figure.homepage-image {
   justify-content: center;
   align-items: center;
 }
+figure.homepage-image img {
+  margin-top: 30px;
+}
+
+@media (max-width: 1000px) {
+  .floating-title { top: 210px; }
+  .title-float { font-size: 30px; }
+}
 @media (min-width: 850px) {
-  figure.homepage-image img { margin-top: -80px; }
-  figure.homepage-image { height: 470px; }
+  figure.homepage-image { height: 450px; }
 }
 @media (max-width: 850px) {
-  figure.homepage-image { height: 450px; }
+  figure.homepage-image { height: 430px; }
 }
 @media (max-width: 800px) {
   figure.homepage-image { height: 400px; }
 }
 @media (max-width: 750px) {
   figure.homepage-image { height: 350px; }
+  .floating-title { top: 180px; }
+  .two-lines-floating .floating-title {
+    top: 195px;
+  }
 }
 @media (max-width: 700px) {
-  figure.homepage-image { height: 300px; }
+  figure.homepage-image { height: 285px; }
+  .floating-title { top: 165px; }
+  .two-lines-floating .floating-title {
+    top: 180px;
+  }
+  .title-float { font-size: 25px; }
+}
+@media (max-width: 600px) {
+  .title-float { font-size: 20px; }
 }
 
+@media (max-width: 781px) {
+  .mission-banner .body-column {
+    padding-top: 50px;
+  }
+}
+
+
+/* --------------------------------------------*/
 .homepage-below-image .body-column {
   flex-basis: 78%;
 }
@@ -82,7 +144,14 @@ figure.homepage-image {
   position: absolute;
   /* left is set by script */
 }
-
+/* centers the Our Mission button under 782px */
+@media (min-width: 782px) {
+  .wp-block-column.title-column {
+    display: flex!important;
+    align-items: center;
+    justify-content: center;
+  }
+}
 
 /* --------------------------------------------*/
 /* homepage flipboxes */
@@ -111,6 +180,16 @@ figure.homepage-image {
   }
 }
 
+/* twitter feed (smash balloon) */
+.ctf-tweets {
+  width: 98%;
+  margin-left: 1%;
+}
+.ctf-tweets .ctf-item {
+  font-size: 0.8em!important;
+}
+
+
 /* --------------------------------------------*/
 /* about page */
 
@@ -135,41 +214,12 @@ div.wp-site-blocks main div.wp-block-group.mission-banner {
   padding-bottom: 15px!important;
 }
 
-.twitter-timeline {
+/*.twitter-timeline {
   width: unset!important;
   padding: 0 30px;
-}
+}*/
 
-.floating-title {
-  position: absolute;
-  top: 200px;
-  right: 10%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  z-index: 1;
-}
-.title-float {
-  padding: 0 8px;
-  background: #C60739;
-  font-weight: 600;
-  font-size: 37px;
-  color: #ffffff;
-  margin-bottom: 10px;
-}
 
-a.title-float-cta-button {
-  background: #FFFFFF;
-  border-radius: 3px;
-  border: 0;
-  color: #171A1C;
-  text-decoration: none;
-  padding: 12px 55px;
-  margin-top: 20px;
-}
-a.title-float-cta-button:hover {
-  color: #C60739;
-}
 
 p.rev-title {
   display: inline-block;
@@ -311,59 +361,12 @@ p.rev-title {
   display: none;
 }
 
-
 .no-underline-link p {
   font-size:25px;
   font-style:normal;
   font-weight:600;
 }
 
-/* --------------------------------------------*/
-@media (max-width: 1169px) {
-  body.home .has-global-padding.is-layout-constrained .featured-image-stack {
-    margin-left: -35px;
-    margin-right: -35px;
-    margin-top: -5px!important;
-  }
-}
-/* centers the button under 782px */
-@media (min-width: 782px) {
-  .wp-block-column.title-column {
-    display: flex!important;
-    align-items: center;
-    justify-content: center;
-  }
-}
-/* floating-title */
-@media (max-width: 1000px) {
-  .floating-title {
-    top: 210px;
-  }
-  .title-float {
-     font-size: 30px;
-  }
-}
-@media (max-width: 781px) {
-  .mission-banner .body-column {
-    padding-top: 50px;
-  }
-}
-@media (max-width: 700px) {
-  .floating-title {
-    top: 130px;
-  }
-  .title-float {
-     font-size: 25px;
-  }
-}
-@media (max-width: 600px) {
-  .floating-title {
-    top: 130px;
-  }
-  .title-float {
-     font-size: 20px;
-  }
-}
 /* --------------------------------------------*/
 .above-flippers-text {
   font-size: 24px !important;
